@@ -1,3 +1,3 @@
 # demo-repository
 this only for learning purpose
-Author - Yashdeep Singh
+Author - Yashdeep Singh (Python Developer)
