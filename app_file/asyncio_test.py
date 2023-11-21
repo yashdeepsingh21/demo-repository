@@ -12,7 +12,9 @@ async def asset_function(delay):
 
 async def dependent_function():
     print("this function is dependent on another function")
-    money = await asset_function(delay=None)
+<<<<<<< HEAD:app_file/asyncio_test.py
+    money = await asset_function(delay=10)  # change delay time accordingly
+>>>>>>> main:asyncio_test.py
     if money:
         print("asset function provide money")
     else:
