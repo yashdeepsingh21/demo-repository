@@ -129,3 +129,16 @@
 #         max = len(i)
 #
 # print(max)
+
+# Python – Append Dictionary Keys and Values ( In order ) in dictionary
+
+test_dict = {"Gfg": 1, 'is': 2, 'Best': 3}
+
+all_keys = []
+all_values = []
+
+for key, value in test_dict.items():
+    all_keys.append(key)
+    all_values.append(value)
+
+print(all_keys+all_values)
