@@ -97,25 +97,35 @@
 
 # Python – Remove keys with substring values
 
-test_dict = {1: 'Gfg is git ', 2: 'Gfg is stash'}
-sub_list = ['git', 'stash']
+# test_dict = {1: 'Gfg is git ', 2: 'Gfg is stash'}
+# sub_list = ['git', 'stash']
+#
+#
+# def remove_keys(test_dict, sub_list):
+#     result = {}
+#     for key, value in test_dict.items():
+#         list_value = value.split(" ")
+#         flag = False
+#         for i in sub_list:
+#             print(i, list_value)
+#             if i in list_value:
+#                 flag = True
+#                 break
+#         if flag == False:
+#             result[key] = value
+#
+#     return result
+#
+#
+# print(remove_keys(test_dict, sub_list))
 
+# Python – Dictionary with maximum count of pairs
 
-def remove_keys(test_dict, sub_list):
-    result = {}
-    for key, value in test_dict.items():
-        list_value = value.split(" ")
-        flag = False
-        for i in sub_list:
-            print(i, list_value)
-            if i in list_value:
-                flag = True
-                break
-        if flag == False:
-            result[key] = value
-
-    return result
-
-
-print(remove_keys(test_dict, sub_list))
-
+# test_list = [{'gfg': 2, 'best': 4}, {'gfg': 2, 'is': 3, 'best': 4, 'CS': 9, "abc": 1}, {'gfg': 2}]
+#
+# max = len(test_list[0])
+# for i in test_list:
+#     if len(i) > max:
+#         max = len(i)
+#
+# print(max)
