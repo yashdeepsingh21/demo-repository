@@ -30,3 +30,14 @@
 #     result_dict[keys] = {key: values}
 #
 # print(result_dict)
+
+# Python – Inversion in nested dictionary ~~~~important~~~~
+
+test_dict = {'a': {'b': {}}, 'd': {'e': {}}, 'f': {'g': {}}}
+
+result_dict = {}
+
+for key, value in test_dict.items():
+    result_dict[list(value.keys())[0]] = {key: list(value.values())[0]}
+
+print(result_dict)
