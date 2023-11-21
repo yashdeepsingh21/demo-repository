@@ -20,3 +20,5 @@ async def dependent_function():
 
 
 asyncio.run(dependent_function())
+
+print("asuncio-feature branch re-activation")
