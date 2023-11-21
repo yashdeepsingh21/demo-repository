@@ -77,20 +77,45 @@
 
 # Python – Remove keys with Values Greater than K ( Including mixed values )
 
-test_dict = {'Gfg': 3, 'is': 7, 'best': 10, 'for': 6, 'geeks': 'CS'}
+# test_dict = {'Gfg': 3, 'is': 7, 'best': 10, 'for': 6, 'geeks': 'CS'}
+#
+# K = 6
+#
+#
+# def remove_key_greater_than_K(test_dict, K):
+#     result = {}
+#     for key, value in test_dict.items():
+#         print(type(value), value)
+#         if type(value) != type(K):
+#             result[key] = value
+#         elif value <= K:
+#             result[key] = value
+#     return result
+#
+#
+# print(remove_key_greater_than_K(test_dict, K))
 
-K = 6
+# Python – Remove keys with substring values
+
+test_dict = {1: 'Gfg is git ', 2: 'Gfg is stash'}
+sub_list = ['git', 'stash']
 
 
-def remove_key_greater_than_K(test_dict, K):
+def remove_keys(test_dict, sub_list):
     result = {}
     for key, value in test_dict.items():
-        print(type(value), value)
-        if type(value) != type(K):
+        list_value = value.split(" ")
+        flag = False
+        for i in sub_list:
+            print(i, list_value)
+            if i in list_value:
+                flag = True
+                break
+        if flag == False:
             result[key] = value
-        elif value <= K:
-            result[key] = value
+
     return result
 
 
-print(remove_key_greater_than_K(test_dict, K))
+print(remove_keys(test_dict, sub_list))
+
