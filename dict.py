@@ -132,13 +132,27 @@
 
 # Python – Append Dictionary Keys and Values ( In order ) in dictionary
 
-test_dict = {"Gfg": 1, 'is': 2, 'Best': 3}
+# test_dict = {"Gfg": 1, 'is': 2, 'Best': 3}
+#
+# all_keys = []
+# all_values = []
+#
+# for key, value in test_dict.items():
+#     all_keys.append(key)
+#     all_values.append(value)
+#
+# print(all_keys+all_values)
 
-all_keys = []
-all_values = []
 
-for key, value in test_dict.items():
-    all_keys.append(key)
-    all_values.append(value)
+# Python – Extract Unique values dictionary values
 
-print(all_keys+all_values)
+test_dict = {'gfg': [5, 6, 7, 8], 'is': [10, 11, 7, 5], 'best': [6, 12, 10, 8], 'for': [1, 2, 5]}
+
+result = []
+
+for value in test_dict.values():
+    result += value
+
+result_set = set(result)
+
+print(list(result_set))
