@@ -159,26 +159,38 @@
 
 # Python – Keys associated with Values in Dictionary
 
-test_dict = {'gfg': [1, 2, 3], 'is': [1, 4], 'best': [4, 2]}
+# test_dict = {'gfg': [1, 2, 3], 'is': [1, 4], 'best': [4, 2]}
+#
+# result = []
+#
+# for value in test_dict.values():
+#     result += value
+#
+# data = list(set(result))
+#
+# data.sort()
+#
+# # print(data)
+#
+# output = {}
+#
+# for value in data:
+#     list_value = []
+#     for key, values in test_dict.items():
+#         if value in values:
+#             list_value.append(key)
+#             output[value] = list_value
+#
+# print(output)
 
-result = []
+# Python – Sort Dictionary key and values List
 
-for value in test_dict.values():
-    result += value
+test_dict = {'c': [3], 'b': [12, 10], 'a': [19, 4]}
 
-data = list(set(result))
+dict = {}
 
-data.sort()
+for key, value in sorted(test_dict.items()):
+    value.sort()
+    dict[key] = value
 
-# print(data)
-
-output = {}
-
-for value in data:
-    list_value = []
-    for key, values in test_dict.items():
-        if value in values:
-            list_value.append(key)
-            output[value] = list_value
-
-print(output)
+print(dict)
