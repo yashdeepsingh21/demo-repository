@@ -185,12 +185,23 @@
 
 # Python – Sort Dictionary key and values List
 
-test_dict = {'c': [3], 'b': [12, 10], 'a': [19, 4]}
+# test_dict = {'c': [3], 'b': [12, 10], 'a': [19, 4]}
+#
+# dict = {}
+#
+# for key, value in sorted(test_dict.items()):
+#     value.sort()
+#     dict[key] = value
+#
+# print(dict)
 
-dict = {}
+# sorting question
 
-for key, value in sorted(test_dict.items()):
-    value.sort()
-    dict[key] = value
+array = [10, 9, 5, 3, 12, 37, 1]
 
-print(dict)
+for i in range(len(array)-1):
+    for j in range(i+1, len(array)):
+        if array[i] > array[j]:
+            array[i], array[j] = array[j], array[i]
+
+print(array)
