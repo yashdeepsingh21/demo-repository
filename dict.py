@@ -146,13 +146,39 @@
 
 # Python – Extract Unique values dictionary values
 
-test_dict = {'gfg': [5, 6, 7, 8], 'is': [10, 11, 7, 5], 'best': [6, 12, 10, 8], 'for': [1, 2, 5]}
+# test_dict = {'gfg': [5, 6, 7, 8], 'is': [10, 11, 7, 5], 'best': [6, 12, 10, 8], 'for': [1, 2, 5]}
+#
+# result = []
+#
+# for value in test_dict.values():
+#     result += value
+#
+# result_set = set(result)
+#
+# print(list(result_set))
+
+# Python – Keys associated with Values in Dictionary
+
+test_dict = {'gfg': [1, 2, 3], 'is': [1, 4], 'best': [4, 2]}
 
 result = []
 
 for value in test_dict.values():
     result += value
 
-result_set = set(result)
+data = list(set(result))
 
-print(list(result_set))
+data.sort()
+
+# print(data)
+
+output = {}
+
+for value in data:
+    list_value = []
+    for key, values in test_dict.items():
+        if value in values:
+            list_value.append(key)
+            output[value] = list_value
+
+print(output)
