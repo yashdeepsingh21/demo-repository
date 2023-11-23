@@ -197,11 +197,22 @@
 
 # sorting question
 
-array = [10, 9, 5, 3, 12, 37, 1]
+array = [0, 9, 5, 3, 12, 0, 1]
 
-for i in range(len(array)-1):
-    for j in range(i+1, len(array)):
-        if array[i] > array[j]:
-            array[i], array[j] = array[j], array[i]
+# for i in range(len(array) - 1):
+#     for j in range(i + 1, len(array)):
+#         if array[i] > array[j]:
+#             array[i], array[j] = array[j], array[i]
+#
+# print(array)
+
+for i in range(len(array) - 1):
+    min = array[i]
+    index = i
+    for j in range(i + 1, len(array)):
+        if array[j] < min:
+            min = array[j]
+            index = j
+    array[i], array[index] = min, array[i]
 
 print(array)
