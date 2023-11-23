@@ -197,7 +197,7 @@
 
 # sorting question
 
-array = [0, 9, 5, 3, 12, 0, 1]
+# array = [0, 9, 5, 3, 12, 0, 1]
 
 # for i in range(len(array) - 1):
 #     for j in range(i + 1, len(array)):
@@ -206,13 +206,25 @@ array = [0, 9, 5, 3, 12, 0, 1]
 #
 # print(array)
 
-for i in range(len(array) - 1):
-    min = array[i]
-    index = i
-    for j in range(i + 1, len(array)):
-        if array[j] < min:
-            min = array[j]
-            index = j
-    array[i], array[index] = min, array[i]
+# for i in range(len(array) - 1):
+#     min = array[i]
+#     index = i
+#     for j in range(i + 1, len(array)):
+#         if array[j] < min:
+#             min = array[j]
+#             index = j
+#     array[i], array[index] = min, array[i]
+#
+# print(array)
+
+array = [10, 9, 5, 3, 12, 0, 1]
+
+for i in range(1, len(array)):
+    key = array[i]
+    j = i - 1
+    while j >= 0 and array[j] > key:
+        array[j + 1] = array[j]
+        j = j - 1
+    array[j + 1] = key
 
 print(array)
