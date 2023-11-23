@@ -217,14 +217,22 @@
 #
 # print(array)
 
-array = [10, 9, 5, 3, 12, 0, 1]
+# array = [10, 9, 5, 3, 12, 0, 1]
+#
+# for i in range(1, len(array)):
+#     key = array[i]
+#     j = i - 1
+#     while j >= 0 and array[j] > key:
+#         array[j + 1] = array[j]
+#         j = j - 1
+#     array[j + 1] = key
+#
+# print(array)
 
-for i in range(1, len(array)):
-    key = array[i]
-    j = i - 1
-    while j >= 0 and array[j] > key:
-        array[j + 1] = array[j]
-        j = j - 1
-    array[j + 1] = key
+# kwargs example is added
+def kwargs_check(**kwargs):
+    data = kwargs
+    print(kwargs["two"])
 
-print(array)
+
+kwargs_check(one=1, two=2, four="three")
