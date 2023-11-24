@@ -230,9 +230,32 @@
 # print(array)
 
 # kwargs example is added
-def kwargs_check(**kwargs):
-    data = kwargs
-    print(kwargs["two"])
+# def kwargs_check(**kwargs):
+#     data = kwargs
+#     print(kwargs["two"])
+#
+#
+# kwargs_check(one=1, two=2, four="three")
+
+# s = "12:59:59AM"
+# print(s[-2:])
+# if s[-2:] == "AM":
+#     if s[0]=="0":
+#         print(s[:-2])
+#     else:
+#         first_two = str(12 - int(s[:2]))
+#         print(f"0{str(first_two)}{s[2:-2]}")
+# else:
+#     if int(s[:2]) >=12:
+#         first_two = 12 + 12 - int(s[:2])
+#         print(f"{str(first_two)}{s[2:-2]}")
+#     else:
+#         first_two = 12 + int(s[:2])
+#         print(f"{str(first_two)}{s[2:-2]}")
 
 
-kwargs_check(one=1, two=2, four="three")
+dict = {"add": 10, "two": "", "three": None}
+
+value = dict.get("three", "my_value")
+
+print(value)
